@@ -1,0 +1,45 @@
+import "gameCommon.proto";
+
+enum ErrorCode
+{
+LoginErrInvalidAccount = 1;//账号验证失败
+LoginErrAlreadyLogined =2;//已经登陆过了
+CreateDeskErrLackMoney =3;//房卡不足创建失败
+CreateDeskErrNotLogin =4;//玩家没有登陆
+}
+
+
+//登陆返回数据
+message LoginRsp
+{
+optional int32 ret = 1;
+optional UserInfo info = 2;
+}
+
+
+//创建房间返回数据
+message CreateDeskRsp
+{
+optional int32 ret = 1;
+optional int32 desk_id = 2;
+}
+
+//进房间桌子
+message EnterDeskRep
+{
+optional int32 ret = 1;
+optional int32 desk_id =2;
+optional int32 seat =3;
+}
+
+//桌子玩家信息
+message DeskPlayerInfo
+{
+optional UserInfo info = 1;
+optional string ip =2;
+}
+
+message DeskPlayerInfoList
+{
+repeated DeskPlayerInfo players = 1;
+}

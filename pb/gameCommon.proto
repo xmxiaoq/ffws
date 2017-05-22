@@ -1,0 +1,12 @@
+message UserInfo
+{
+optional int32 uid			= 1;
+optional string name		= 2;
+optional int32 male =3;
+optional int32 exp=4;
+optional int32 coin=5;
+optional int32 dimond=6;
+optional int32 level=7;
+optional string strInfo=8;
+optional bool isRobot = 9 [default = false];
+}

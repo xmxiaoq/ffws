@@ -1,0 +1,10 @@
+message LoginReq
+{
+optional int32 uid			= 1;
+optional string guid		= 2;
+}
+
+message EnterDeskReq
+{
+optional int32 desk_id	=1;
+}

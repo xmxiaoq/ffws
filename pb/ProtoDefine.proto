@@ -1,0 +1,12 @@
+
+enum C2S_ProtoId {
+    cLogin = 0xC1; //登录 LoginReq
+    cHeartBeat = 0xC2; //心跳
+    cCreateDesk = 0xC3; //创建房间桌子
+};
+
+enum S2C_ProtoId {
+    sLogin = 0xA1;
+    sHeartBeat = 0xA2;
+    sCreateDesk = 0xA3;
+};
